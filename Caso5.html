@@ -1,0 +1,17 @@
+SELECT *
+FROM users_emails
+WHERE data_cadastro >= DATE_SUB(CURRENT_DATE, INTERVAL 30 DAY);
+
+<h3>SELECT *:</h3> Isso indica que queremos selecionar todas as colunas da tabela users_emails.
+
+<h3>FROM users_emails:</h3> Aqui definimos a tabela da qual queremos selecionar os dados, que é a tabela "users_emails".
+
+<h3>WHERE data_cadastro >= DATE_SUB(CURRENT_DATE, INTERVAL 30 DAY):</h3> Isso é a cláusula de condição que filtra os resultados.
+
+<h3>data_cadastro:</h3> É o nome da coluna na tabela que armazena a data de cadastro dos usuários.
+
+<h3>CURRENT_DATE:</h3> Retorna a data atual.
+
+<h3>DATE_SUB(CURRENT_DATE, INTERVAL 30 DAY):</h3> Isso subtrai 30 dias da data atual, resultando na data que estava há 30 dias atrás.
+
+<h3>data_cadastro >= ...:</h3> Isso compara a coluna data_cadastro com a data calculada (30 dias atrás) para selecionar apenas os registros em que a data de cadastro é maior ou igual a essa data.
